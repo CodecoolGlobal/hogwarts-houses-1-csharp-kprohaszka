@@ -1,4 +1,5 @@
 using HogwartsHouses.Models;
+using System.Collections.Generic;
 
 namespace HogwartsHouses.DAL
 {
@@ -9,6 +10,11 @@ namespace HogwartsHouses.DAL
         public RoomSampledRepository()
         {
             _roomSampler = new RoomSampler();
+        }
+
+        public IEnumerable<Room> GetAll()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
