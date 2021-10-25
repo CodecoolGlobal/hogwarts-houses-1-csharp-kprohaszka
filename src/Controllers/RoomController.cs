@@ -38,5 +38,13 @@ namespace HogwartsHouses.Controllers
             Room room = _roomService.GetRoomById(id);
             return room;
         }
+
+        [HttpGet("available")]
+
+        public IEnumerable<Room> GetAviableRooms()
+        {
+            var rooms = _roomService.GetAviableRooms();
+            return rooms;
+        }
     }
 }
