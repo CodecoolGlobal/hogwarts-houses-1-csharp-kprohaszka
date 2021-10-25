@@ -25,6 +25,13 @@ namespace HogwartsHouses.DAL
             Students.Add(new Student("Draco Malfoy", PetType.None));
         }
 
+        public void NewRoomsForStudents()
+        {
+            Rooms.Add(new Room(1, true));
+            Rooms.Add(new Room(2, true));
+            Rooms.Add(new Room(3, true));
+        }
+
         public void Initialize()
         {
         }
