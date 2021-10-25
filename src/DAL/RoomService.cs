@@ -42,5 +42,9 @@ namespace HogwartsHouses.DAL
             _repository.UpdateRoomById(id, room);
         }
 
+        public IEnumerable<Room> GetAllRoomsWithoutCatsOrOwls()
+        {
+            return _repository.GetAllRoomsWithoutCatsOrOwls();
+        }
     }
 }
