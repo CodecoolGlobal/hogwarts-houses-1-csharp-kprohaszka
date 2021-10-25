@@ -12,5 +12,10 @@ namespace HogwartsHouses.DAL
             _repository = repository;
         }
 
+        public IEnumerable<Room> GetAll()
+        {
+            return _repository.GetAllRooms();
+        }
+
     }
 }
