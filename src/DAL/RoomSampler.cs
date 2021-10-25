@@ -49,6 +49,10 @@ namespace HogwartsHouses.DAL
 
         public void Initialize()
         {
+            StarterListOfStudents();
+            NewRoomsForStudents();
+            AssignStudentToRoom(Students[0], Rooms.Where(x => x.Id == 1).Single());
+            AssignStudentToRoom(Students[1], Rooms.Where(x => x.Id == 2).Single());
         }
     }
 }
