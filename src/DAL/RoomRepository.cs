@@ -23,6 +23,11 @@ namespace HogwartsHouses.DAL
             return _roomSampler.Rooms;
         }
 
+        public void Add(Room room)
+        {
+            _roomSampler.Rooms.Add(room);
+        }
+
 
     }
 }
