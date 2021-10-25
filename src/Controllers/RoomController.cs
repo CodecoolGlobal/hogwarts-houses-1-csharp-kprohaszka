@@ -46,5 +46,17 @@ namespace HogwartsHouses.Controllers
             var rooms = _roomService.GetAviableRooms();
             return rooms;
         }
+
+        [HttpDelete("{id}")]
+        public void DeleteRoomById(int id)
+        {
+            _roomService.DeleteRoomById(id);
+        }
+
+        [HttpPut("{id}")]
+        public void UpdateRoomById(int id, [FromBody] Room room)
+        {
+            _roomService.UpdateRoomById(id, room);
+        }
     }
 }
