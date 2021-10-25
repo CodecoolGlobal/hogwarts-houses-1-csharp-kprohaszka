@@ -30,5 +30,13 @@ namespace HogwartsHouses.Controllers
         {
             _roomService.AddNewRoom(room);
         }
+
+        //api/room/{roomId}
+        [HttpGet("{id}")]
+        public Room GetRoomById(int id)
+        {
+            Room room = _roomService.GetRoomById(id);
+            return room;
+        }
     }
 }
