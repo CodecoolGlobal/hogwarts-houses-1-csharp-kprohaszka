@@ -27,5 +27,10 @@ namespace HogwartsHouses.DAL
             return _repository.GetRoomById(id);
         }
 
+        public IEnumerable<Room> GetAviableRooms()
+        {
+            return _repository.GetAviableRooms();
+        }
+
     }
 }
