@@ -22,5 +22,10 @@ namespace HogwartsHouses.DAL
             _repository.Add(room);
         }
 
+        public Room GetRoomById(int id)
+        {
+            return _repository.GetRoomById(id);
+        }
+
     }
 }
