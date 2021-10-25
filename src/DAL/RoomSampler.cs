@@ -32,6 +32,21 @@ namespace HogwartsHouses.DAL
             Rooms.Add(new Room(3, true));
         }
 
+        public void AssignStudentToRoom(Student student, Room room)
+        {
+            foreach (var roomInRooms in Rooms)
+            {
+                if (roomInRooms == room && roomInRooms.Available)
+                {
+                    room.Students.Add(student);
+                    room.Available = false;
+                    Rooms.Remove(roomInRooms);
+                    Rooms.Add(room);
+                    break;
+                }
+            }
+        }
+
         public void Initialize()
         {
         }
