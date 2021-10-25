@@ -17,5 +17,10 @@ namespace HogwartsHouses.DAL
             return _repository.GetAllRooms();
         }
 
+        public void AddNewRoom(Room room)
+        {
+            _repository.Add(room);
+        }
+
     }
 }
