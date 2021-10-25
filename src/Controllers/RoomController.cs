@@ -58,5 +58,13 @@ namespace HogwartsHouses.Controllers
         {
             _roomService.UpdateRoomById(id, room);
         }
+
+        [HttpGet("rat-owners")]
+
+        public IEnumerable<Room> GetAllRoomsWithoutCatsOrOwls()
+        {
+            return _roomService.GetAllRoomsWithoutCatsOrOwls();
+
+        }
     }
 }
