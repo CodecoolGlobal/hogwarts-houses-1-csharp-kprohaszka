@@ -1,0 +1,16 @@
+﻿@using HogwartsHouses.Models
+
+<body>
+    <div>
+        <ul>
+            @foreach (var room in Model)
+            {
+                <li> number of room:@room.Number</li>
+                <li>is room aviable: @room.Aviable</li>
+                <li>id of room: @room.Id</li>
+
+            }
+        </ul>
+    </div>
+
+</body>
