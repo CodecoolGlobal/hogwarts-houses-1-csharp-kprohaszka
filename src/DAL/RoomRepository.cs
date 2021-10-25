@@ -41,6 +41,11 @@ namespace HogwartsHouses.DAL
             return null;
         }
 
+        public IEnumerable<Room> GetAviableRooms()
+        {
+            return _roomSampler.Rooms.Where(x => x.Available == true);
+        }
+
 
     }
 }
