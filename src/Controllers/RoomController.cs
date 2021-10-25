@@ -18,6 +18,13 @@ namespace HogwartsHouses.Controllers
             _roomService = roomService;
         }
 
+        [HttpGet("index")]
+        public ActionResult Index()
+        {
+            var rooms = _roomService.GetAll();
+            return View(rooms);
+        }
+
         [HttpGet]
         public IEnumerable<Room> GetAllRooms()
         {
