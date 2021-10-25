@@ -19,6 +19,12 @@ namespace HogwartsHouses.DAL
             Initialize();
         }
 
+        public void StarterListOfStudents()
+        {
+            Students.Add(new Student("Hermione Granger", PetType.Cat));
+            Students.Add(new Student("Draco Malfoy", PetType.None));
+        }
+
         public void Initialize()
         {
         }
