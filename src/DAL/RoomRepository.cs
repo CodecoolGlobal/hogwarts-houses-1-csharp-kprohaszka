@@ -46,6 +46,11 @@ namespace HogwartsHouses.DAL
             return _roomSampler.Rooms.Where(x => x.Available == true);
         }
 
+        public void DeleteRoomByRoomId(int id)
+        {
+            _roomSampler.Rooms.RemoveWhere(room => room.Id == id);
+        }
+
 
     }
 }
