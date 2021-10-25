@@ -28,6 +28,19 @@ namespace HogwartsHouses.DAL
             _roomSampler.Rooms.Add(room);
         }
 
+        public Room GetRoomById(int id)
+        {
+            foreach (var room in _roomSampler.Rooms)
+            {
+                if (room.Id == id)
+                {
+                    return room;
+                }
+            }
+
+            return null;
+        }
+
 
     }
 }
