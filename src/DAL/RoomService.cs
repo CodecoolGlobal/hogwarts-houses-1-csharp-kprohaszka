@@ -37,5 +37,10 @@ namespace HogwartsHouses.DAL
             _repository.DeleteRoomByRoomId(id);
         }
 
+        public void UpdateRoomById(int id, Room room)
+        {
+            _repository.UpdateRoomById(id, room);
+        }
+
     }
 }
