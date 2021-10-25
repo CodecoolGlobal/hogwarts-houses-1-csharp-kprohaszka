@@ -20,9 +20,8 @@ namespace HogwartsHouses
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            //services.AddSingleton<IRepository<Room>>(x => new RoomSampledRepository());
-            services.AddSingleton<IRepository<Room>, RoomSampledRepository>();
+            services.AddControllersWithViews();
+            services.AddSingleton<IRepository<Room>>(x => new RoomRepository());
             services.AddSingleton<IRoomService>(x => new RoomService(x.GetRequiredService<IRepository<Room>>()));
         }
 
