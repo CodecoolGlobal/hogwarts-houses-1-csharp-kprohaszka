@@ -1,26 +1,27 @@
-﻿
-using HogwartsHouses.DAL;
+﻿using HogwartsHouses.DAL;
 using HogwartsHouses.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
 namespace HogwartsHouses.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class RoomController : Controller
-    {
-        private readonly IRepository<Room> _repository;
 
-        public RoomController(IRepository<Room> repository)
+    {
+
+        private readonly IRoomService _roomService;
+        public RoomController(IRoomService roomService)
         {
-            _repository = repository;
+            _roomService = roomService;
         }
 
         [HttpGet]
         public IEnumerable<Room> GetAllRooms()
         {
-            var rooms = _repository.GetAll();
+            var rooms = _roomService.GetAll();
             return rooms;
         }
     }
