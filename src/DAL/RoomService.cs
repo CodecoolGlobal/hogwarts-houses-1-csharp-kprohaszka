@@ -10,5 +10,12 @@ namespace HogwartsHouses.DAL
         {
             _repository = repository;
         }
+
+        public Room createRoom()
+        {
+            var room = new Room(5, "Room1");
+            return room;
+        }
+
     }
 }

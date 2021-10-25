@@ -14,7 +14,7 @@ namespace HogwartsHouses.DAL
 
         public IEnumerable<Room> GetAll()
         {
-            throw new System.NotImplementedException();
+            return _roomSampler.Rooms;
         }
     }
 }

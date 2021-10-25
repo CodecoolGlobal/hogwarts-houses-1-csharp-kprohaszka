@@ -10,12 +10,12 @@ namespace HogwartsHouses.DAL
 
         public RoomSampler()
         {
+            Rooms = new HashSet<Room>();
             Initialize();
         }
 
         public void Initialize()
         {
-            throw new NotImplementedException();
         }
     }
 }

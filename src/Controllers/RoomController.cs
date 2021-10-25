@@ -24,5 +24,11 @@ namespace HogwartsHouses.Controllers
             var rooms = _roomService.GetAll();
             return rooms;
         }
+
+        [HttpPost]
+        public void AddNewRoom([FromBody] Room room)
+        {
+            _roomService.AddNewRoom(room);
+        }
     }
 }
